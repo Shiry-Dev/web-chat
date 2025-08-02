@@ -3,8 +3,8 @@ let role;
 
 function createSession() {
     role = 'owner';
-    socket = new WebSocket('ws://localhost:8080');
-    //socket = new WebSocket('wss://abcdefgh.ngrok.io');
+    //socket = new WebSocket('ws://localhost:8080');
+    socket = new WebSocket('https://b7352ef738e2.ngrok-free.app');
     socket.onopen = () => socket.send(JSON.stringify({ type: 'init' }));
     setupSocket();
 }
@@ -12,8 +12,8 @@ function createSession() {
 function joinSession() {
     role = 'guest';
     const sessionId = document.getElementById('joinKey').value;
-    socket = new WebSocket('ws://localhost:8080');
-    //socket = new WebSocket('wss://abcdefgh.ngrok.io');
+    //socket = new WebSocket('ws://localhost:8080');
+    socket = new WebSocket('https://b7352ef738e2.ngrok-free.app');
     socket.onopen = () => socket.send(JSON.stringify({ type: 'join', sessionId }));
     setupSocket();
 }
