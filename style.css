@@ -1,20 +1,40 @@
 body.dark {
-background-color: #121212;
-color: #ffffff;
+  background-color: #121212;
+  color: #ffffff;
 }
 
 body.dark input,
 body.dark button {
-background-color: #333;
-color: #fff;
-border: 1px solid #888;
+  background-color: #333;
+  color: #fff;
+  border: 1px solid #888;
 }
 
 body.dark #messages {
-background-color: #1e1e1e;
-border-color: #555;
+  background-color: #1e1e1e;
+  border-color: #555;
 }
 
 button {
-margin: 4px;
+  margin: 4px;
 }
+
+#messages {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  max-height: 200px;
+  overflow-y: auto;
+  border: 1px solid #ccc;
+}
+
+.sent {
+  align-self: flex-end;
+  text-align: right;
+}
+
+.received {
+  align-self: flex-start;
+  text-align: left;
+}
+
