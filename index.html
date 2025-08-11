@@ -15,7 +15,8 @@
         <p id="status"></p>
         <div id="chat" style="display:none">
             <div id="messages" style="border:1px solid black;height:200px;overflow:auto"></div>
-            <input id="msg" placeholder="Type..." />
+            <textarea id="msg" placeholder="Type..."></textarea>
+        <!-- oninput="this.style.height = 'auto'; this.style.height = (this.scrollHeight) + 'px';" style="resize: none; overflow-y: hidden;"></textarea> -->
             <button onclick="sendMessage()">Send</button>
             <button onclick="leaveChat()" style="position: absolute; botton: 0; right: 0;">Sair</button>
         </div>

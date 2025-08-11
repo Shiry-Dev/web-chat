@@ -68,6 +68,7 @@ function setupSocket() {
 		const data = JSON.parse(event.data);
 		if (data.type === 'session_created') {
 			document.getElementById('status').innerText = `Session ID: ${data.sessionId}`;
+// TODO add button that copy the sessionId
 		} else if (data.type === 'joined' || data.type === 'guest_joined') {
 			document.getElementById('chat').style.display = 'block';
 		} else if (data.type === 'message') {
