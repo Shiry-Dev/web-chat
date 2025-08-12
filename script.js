@@ -4,7 +4,7 @@ let role;
 function createSession() {
     role = 'owner';
     //socket = new WebSocket('ws://localhost:8080');
-    socket = new WebSocket('https://b7352ef738e2.ngrok-free.app');
+    socket = new WebSocket('https://websocket-chat-i936.onrender.com/');
     socket.onopen = () => socket.send(JSON.stringify({ type: 'init' }));
     setupSocket();
 }
@@ -13,7 +13,7 @@ function joinSession() {
     role = 'guest';
     const sessionId = document.getElementById('joinKey').value;
     //socket = new WebSocket('ws://localhost:8080');
-    socket = new WebSocket('https://b7352ef738e2.ngrok-free.app');
+    socket = new WebSocket('https://websocket-chat-i936.onrender.com/');
     socket.onopen = () => socket.send(JSON.stringify({ type: 'join', sessionId }));
     setupSocket();
 }
